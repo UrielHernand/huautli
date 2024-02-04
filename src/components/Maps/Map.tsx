@@ -59,6 +59,7 @@ interface MapComponentContainerProps {
 const MapComponentContainer: React.FC<MapComponentContainerProps> = ({ apiKey }) => {
   return (
     <div>
+      <h1>Holaa</h1>
       <NotificationComponent />
       <MapComponent apiKey={apiKey} />
       <ActionButtons />
