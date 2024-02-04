@@ -1,36 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import mapage from './pages/mapage';
 import './App.css'
+import React from 'react';
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
-function App() {
-  const [count, setCount] = useState(0)
+const containerStyle = {
+  width: '100%',
+  height: '900px',
+};
 
+const center = {
+  lat: -34.397,
+  lng: 150.644,
+};
+
+const App: React.FC = () => {
+
+  const handleFotitoClick = () => {
+    alert('Tomando fotito!');
+  };
+
+  const handlePlantarHuautliClick = () => {
+    alert('Planando Huautli!');
+  };
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div>
 
-export default App
+      <div>
+        <h1>Cuadro de notificaciones</h1>
+      </div>
+
+      <LoadScript
+        googleMapsApiKey="GOOGLE_MAPS_API_KEY" //Pendiente
+      >
+        <GoogleMap
+          mapContainerStyle={containerStyle}
+          center={center}
+          zoom={10}
+        >
+          <Marker position={center} />
+        </GoogleMap>
+      </LoadScript>
+
+      <div style={{ marginTop: '20px' }}>
+        <button onClick={handleFotitoClick}>Fotito</button>
+        <button onClick={handlePlantarHuautliClick} style={{ marginLeft: '10px' }}>
+          Plantar Huautli
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default App;
