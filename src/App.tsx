@@ -13,7 +13,7 @@ const App: React.FC = () => {
       <Router>
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
-            <Route path="/maps" element={<MapComponentContainer apiKey='holaa' />} />
+            <Route path="/maps" element={<MapComponentContainer apiKey="AIzaSyDVBjpmS8QBNbc8nfHi3DcTu2hNsOgEuMA" />} />
             <Route path='/' element={<Home></Home>} />
              <Route path='*' element={<Home></Home>} />
               <Route path='/inicio' element={<Menu></Menu>} />
