@@ -1,51 +1,25 @@
 import './App.css'
-import React from 'react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router, Route,  } from 'react-router-dom';
+import MapComponentContainer from './components/Maps/Map';
 
-const containerStyle = {
-  width: '100%',
-  height: '900px',
-};
 
-const center = {
-  lat: -34.397,
-  lng: 150.644,
-};
+
 
 const App: React.FC = () => {
 
-  const handleFotitoClick = () => {
-    alert('Tomando fotito!');
-  };
-
-  const handlePlantarHuautliClick = () => {
-    alert('Planando Huautli!');
-  };
+ 
   return (
-    <div>
-
-      <div>
-        <h1>Cuadro de notificaciones</h1>
-      </div>
-
-      <LoadScript
-        googleMapsApiKey="GOOGLE_MAPS_API_KEY" //Pendiente
-      >
-        <GoogleMap
-          mapContainerStyle={containerStyle}
-          center={center}
-          zoom={10}
-        >
-          <Marker position={center} />
-        </GoogleMap>
-      </LoadScript>
-
-      <div style={{ marginTop: '20px' }}>
-        <button onClick={handleFotitoClick}>Fotito</button>
-        <button onClick={handlePlantarHuautliClick} style={{ marginLeft: '10px' }}>
-          Plantar Huautli
-        </button>
-      </div>
+    <div className="App">
+      <h1>Plantar Huautli</h1>
+      <Router>
+        <Suspense fallback={<div>Loading...</div>}>
+          
+            <Route path="/maps" element={<MapComponentContainer apiKey='holaa' ></MapComponentContainer>} />
+            
+    
+        </Suspense>
+      </Router>
     </div>
   );
 };
