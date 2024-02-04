@@ -28,7 +28,7 @@ const MapComponent: React.FC<MapComponentProps> = ({ apiKey }) => {
 const NotificationComponent: React.FC = () => {
   return (
     <div>
-      <h1>Cuadro de notificaciones</h1>
+      <h2>Cuadro de notificaciones</h2>
     </div>
   );
 };
@@ -59,7 +59,7 @@ interface MapComponentContainerProps {
 const MapComponentContainer: React.FC<MapComponentContainerProps> = ({ apiKey }) => {
   return (
     <div>
-      <h1>Holaa</h1>
+  
       <NotificationComponent />
       <MapComponent apiKey={apiKey} />
       <ActionButtons />
