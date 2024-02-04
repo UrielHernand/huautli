@@ -13,19 +13,19 @@ const Home: React.FC = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <CardContent>
-              <Typography variant="h5" component="div" gutterBottom>
+              <Typography variant="h2" component="div" gutterBottom>
                 ¡Bienvenido!
               </Typography>
 
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="h1" color="text.secondary">
                 Huautli
               </Typography>
 
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="h5" color="text.secondary">
                 ¿Estás listo para jugar?
               </Typography>
 
-              <Button variant="contained" color="primary" style={{ marginTop: '20px' }}>
+              <Button variant="contained" color="primary" style={{ marginTop: '20px' , width : "70%"}} >
                 Jugar
               </Button>
             </CardContent>
