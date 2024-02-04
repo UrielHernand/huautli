@@ -38,7 +38,7 @@ const Menu: React.FC = () => {
               <Divider className="divider" />
 
               <List component="nav" className="menu-list">
-                <Link to="/mis-huautlis" className="link" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Link to="/maps" className="link" style={{ textDecoration: 'none', color: 'inherit' }}>
                   <ListItem button className="menu-item">
                     <ListItemIcon>
                       <NatureIcon className="menu-icon" />

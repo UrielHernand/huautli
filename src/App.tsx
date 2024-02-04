@@ -15,7 +15,7 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/maps" element={<MapComponentContainer apiKey="AIzaSyDVBjpmS8QBNbc8nfHi3DcTu2hNsOgEuMA" />} />
             <Route path='/' element={<Home></Home>} />
-             <Route path='*' element={<Home></Home>} />
+             <Route path='' element={<Home></Home>} />
               <Route path='/inicio' element={<Menu></Menu>} />
               <Route path='/mis-puntos' element={<PuntosGenerales></PuntosGenerales>} />
            

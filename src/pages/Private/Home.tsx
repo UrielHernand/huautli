@@ -36,7 +36,7 @@ const Home: React.FC = () => {
                 startIcon={<PlayCircleOutlineIcon />}
                 style={{ marginTop: '20px', width: '100%' }}
               >
-                <Link to="/maps" className="link" style={{ textDecoration: 'none', color: 'white' }}>
+                <Link to="/inicio" className="link" style={{ textDecoration: 'none', color: 'white' }}>
                   ¡Comienza a Plantar!
                 </Link>
               </Button>
