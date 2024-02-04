@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MapComponentContainer from './components/Maps/Map';
 import Home from './pages/Private/Home';
 
+
 const App: React.FC = () => {
   return (
     <div >

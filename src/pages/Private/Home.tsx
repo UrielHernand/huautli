@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Typography, Button, Card, CardContent, Grid } from '@mui/material';
-
 import amaranto from '../../assets/amaranto.jpeg';
+import './Home.css';
 
 const Home: React.FC = () => {
   return (
@@ -9,16 +9,16 @@ const Home: React.FC = () => {
       <Card>
         <Grid container justifyContent="center" alignItems="center">
           <Grid item xs={12} md={6}>
-            <img src={amaranto} alt="Welcome" style={{ width: '100%', height: 'auto' }} />
+            <img src={amaranto} alt="Welcome" style={{ width: '100%', height: 'auto' }} className="logo" />
           </Grid>
           <Grid item xs={12} md={6}>
             <CardContent>
-              <Typography variant="h2" component="div" gutterBottom>
+              <Typography variant="h1" component="div" gutterBottom>
                 ¡Bienvenido!
               </Typography>
 
-              <Typography variant="h1" color="text.secondary">
-                Huautli
+              <Typography variant="h2" color="text.secondary">
+              Al  Mundo de Huautli
               </Typography>
 
               <Typography variant="h5" color="text.secondary">
